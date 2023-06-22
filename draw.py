@@ -47,18 +47,6 @@ model.fit(
 # Testing
 model.evaluate(x_test, y_test_cat)
 
-# Predict random picture and compare prediction with right answer
-n = randint(0, 10000)
-x = np.expand_dims(x_test[n], axis=0)
-res = model.predict(x)
-print(res)
-
-plt.imshow(x_test[n], cmap=plt.cm.binary)
-plt.show()
-
-print(np.argmax(res), '-------', y_test[n])
-
-#%%
 import tkinter as tk
 import numpy as np
 
